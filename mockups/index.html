@@ -40,6 +40,25 @@
         background: radial-gradient(circle at top right, rgba(217, 72, 59, 0.2), transparent 40%),
           radial-gradient(circle at bottom left, rgba(74, 53, 38, 0.3), transparent 45%), var(--color-surface);
         min-height: 100vh;
+        position: relative;
+        overflow-x: hidden;
+      }
+
+      body::before {
+        content: '';
+        position: fixed;
+        inset: 0;
+        background:
+          radial-gradient(140% 90% at 15% 20%, rgba(217, 72, 59, 0.45), transparent 65%),
+          radial-gradient(120% 80% at 85% 25%, rgba(255, 138, 76, 0.35), transparent 70%),
+          radial-gradient(120% 140% at 50% 85%, rgba(122, 41, 24, 0.4), transparent 70%);
+        background-size: 160% 160%, 180% 180%, 200% 200%;
+        background-position: 0% 0%, 40% 60%, 80% 20%;
+        opacity: 0.15;
+        mix-blend-mode: screen;
+        animation: emberDrift 18s ease-in-out infinite alternate;
+        pointer-events: none;
+        z-index: 0;
       }
 
       a {
@@ -495,6 +514,21 @@
         font-size: 0.7rem;
       }
 
+
+      @keyframes emberDrift {
+        0% {
+          transform: scale(1);
+          background-position: 0% 0%, 40% 60%, 80% 20%;
+        }
+        50% {
+          transform: scale(1.03);
+          background-position: 30% 35%, 65% 25%, 70% 70%;
+        }
+        100% {
+          transform: scale(1.06);
+          background-position: 55% 75%, 20% 55%, 10% 25%;
+        }
+      }
       @media (max-width: 960px) {
         .hero {
           padding: 5.5rem 0 4rem;
