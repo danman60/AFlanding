@@ -1,4 +1,4 @@
-# Broadway Site Builder Ã¢â‚¬â€œ Pre-Production Template
+# Broadway Site Builder ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Å“ Pre-Production Template
 
 A polished Next.js 14 + TypeScript starter tailored for Broadway productions in development. The project ships with a pre-production information architecture, Tailwind CSS design tokens, shadcn/ui primitives, Framer Motion enhancements, SEO metadata, and schema.org JSON-LD helpers.
 
@@ -18,12 +18,12 @@ Then open http://localhost:3000 to view the site. Edit content in `content.json`
 
 ## Project Structure
 
-- `app/` Ã¢â‚¬â€œ Next.js app router pages with semantic, accessible layouts
-- `components/` Ã¢â‚¬â€œ UI building blocks (Hero, NavBar, NewsletterForm, etc.) powered by shadcn/ui primitives
-- `lib/` Ã¢â‚¬â€œ Content loaders, schema helpers, and press data utilities
-- `styles/` Ã¢â‚¬â€œ Design tokens consumed across the UI layer
-- `public/` Ã¢â‚¬â€œ Placeholder media, hero art, and share images
-- `content.json` / `theme.json` Ã¢â‚¬â€œ Primary data sources for show content and branding tokens
+- `app/` ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Å“ Next.js app router pages with semantic, accessible layouts
+- `components/` ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Å“ UI building blocks (Hero, NavBar, NewsletterForm, etc.) powered by shadcn/ui primitives
+- `lib/` ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Å“ Content loaders, schema helpers, and press data utilities
+- `styles/` ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Å“ Design tokens consumed across the UI layer
+- `public/` ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Å“ Placeholder media, hero art, and share images
+- `content.json` / `theme.json` ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Å“ Primary data sources for show content and branding tokens
 
 ## Tailwind & Design Tokens
 
@@ -46,11 +46,11 @@ Sample blueprints are included at `content.example.json` and `theme.example.json
 
 ## Scripts
 
-- `npm run dev` Ã¢â‚¬â€œ Start the development server
-- `npm run build` Ã¢â‚¬â€œ Production build
-- `npm run start` Ã¢â‚¬â€œ Start the production server
-- `npm run lint` Ã¢â‚¬â€œ ESLint with Next core rules
-- `npm run format` Ã¢â‚¬â€œ Prettier with Tailwind plugin
+- `npm run dev` ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Å“ Start the development server
+- `npm run build` ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Å“ Production build
+- `npm run start` ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Å“ Start the production server
+- `npm run lint` ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Å“ ESLint with Next core rules
+- `npm run format` ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Å“ Prettier with Tailwind plugin
 
 ## Analytics Hooks
 
@@ -60,3 +60,17 @@ Primary CTAs dispatch a custom `analytics:cta` event on `window`. Subscribe to t
 
 Run `npm run build` and deploy the `.next` output via your preferred platform (Vercel recommended). Ensure environment variables or serverless functions back your newsletter/contact endpoints if you replace the static placeholders.
 
+
+## Netlify Deployment
+
+This repo includes a static mockup under `mockups/` tailored for Netlify:
+
+1. Netlify build command: _(leave blank)_
+2. Publish directory: `mockups`
+3. Output includes `index.html` plus `/images` assets.
+
+Alternatively, use the CLI:
+
+```bash
+netlify deploy --prod --dir=mockups
+```
