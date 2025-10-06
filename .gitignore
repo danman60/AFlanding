@@ -34,3 +34,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+AFAssets/
+pdf_text_output.txt
+*.pdf
