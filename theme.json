@@ -1,0 +1,19 @@
+{
+  "palette": {
+    "primary": "#1B2A1F",
+    "secondary": "#4A3526",
+    "accent": "#D9483B",
+    "surface": "#0F0B07",
+    "onSurface": "#F5EAD7"
+  },
+  "typography": {
+    "display": "'Playfair Display', serif",
+    "text": "'Inter', sans-serif"
+  },
+  "hero": {
+    "mediaType": "image",
+    "src": "/images/animalfarm-hero.svg",
+    "poster": "/images/animalfarm-hero.svg",
+    "overlay": "linear-gradient(130deg, rgba(15, 11, 7, 0.9), rgba(217, 72, 59, 0.55))"
+  }
+}

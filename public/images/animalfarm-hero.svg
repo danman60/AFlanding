@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1b2a1f" />
+      <stop offset="100%" stop-color="#4a3526" />
+    </linearGradient>
+    <linearGradient id="sun" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f8c36a" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#d9483b" stop-opacity="0.8" />
+    </linearGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#sky)" />
+  <circle cx="1480" cy="320" r="240" fill="url(#sun)" opacity="0.75" />
+  <path d="M0 780 Q360 620 720 720 T1440 700 T1920 820 V1080 H0 Z" fill="#2a1d15" opacity="0.9" />
+  <path d="M0 860 Q260 740 520 800 T1040 780 T1600 860 Q1760 920 1920 900 V1080 H0 Z" fill="#3a271c" opacity="0.85" />
+  <g fill="#f5ead7" opacity="0.9" font-family="'Playfair Display', serif">
+    <text x="10%" y="30%" font-size="72">Premiering Soon</text>
+    <text x="10%" y="45%" font-size="140">Animal Farm</text>
+    <text x="10%" y="56%" font-size="80">The Musical</text>
+  </g>
+  <text x="10%" y="66%" font-size="34" fill="#f5ead7" font-family="'Inter', sans-serif" opacity="0.8">
+    "All animals are equal, but some animals are more equal than others."
+  </text>
+</svg>

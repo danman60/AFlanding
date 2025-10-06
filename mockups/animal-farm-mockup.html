@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Animal Farm: The Musical — Concept Mockup</title>
+    <meta
+      name="description"
+      content="Animal Farm: The Musical reimagines Orwell's classic through an electrifying score and galvanizing staging."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --color-primary: #1b2a1f;
+        --color-secondary: #4a3526;
+        --color-accent: #d9483b;
+        --color-surface: #0f0b07;
+        --color-surface-alt: rgba(255, 255, 255, 0.06);
+        --color-on-surface: #f5ead7;
+        --color-muted: rgba(245, 234, 215, 0.7);
+        --shadow-soft: 0 24px 60px rgba(15, 11, 7, 0.45);
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: 'Inter', sans-serif;
+        line-height: 1.6;
+        color: var(--color-on-surface);
+        background: radial-gradient(circle at top right, rgba(217, 72, 59, 0.2), transparent 40%),
+          radial-gradient(circle at bottom left, rgba(74, 53, 38, 0.3), transparent 45%), var(--color-surface);
+        min-height: 100vh;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      img {
+        max-width: 100%;
+        display: block;
+      }
+
+      .container {
+        width: min(1100px, 92vw);
+        margin: 0 auto;
+      }
+
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        backdrop-filter: blur(12px);
+        background: rgba(15, 11, 7, 0.85);
+        border-bottom: 1px solid rgba(245, 234, 215, 0.08);
+      }
+
+      .nav-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem 0;
+      }
+
+      .brand {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.15rem;
+        letter-spacing: 0.32rem;
+        text-transform: uppercase;
+        color: var(--color-accent);
+      }
+
+      nav {
+        display: flex;
+        align-items: center;
+        gap: 1.25rem;
+      }
+
+      nav a {
+        font-size: 0.95rem;
+        font-weight: 500;
+        color: var(--color-muted);
+      }
+
+      nav a:hover,
+      nav a:focus-visible {
+        color: var(--color-on-surface);
+      }
+
+      .cta-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.75rem 1.75rem;
+        border-radius: 999px;
+        background: var(--color-accent);
+        color: var(--color-on-surface);
+        font-weight: 600;
+        letter-spacing: 0.02em;
+        border: none;
+        cursor: pointer;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+
+      .cta-btn:hover,
+      .cta-btn:focus-visible {
+        transform: translateY(-1px);
+        box-shadow: 0 12px 30px rgba(217, 72, 59, 0.45);
+      }
+
+      .mobile-toggle {
+        display: none;
+        background: none;
+        border: 1px solid rgba(245, 234, 215, 0.2);
+        border-radius: 999px;
+        color: var(--color-on-surface);
+        padding: 0.35rem 0.7rem;
+      }
+
+      .mobile-toggle span {
+        display: block;
+        width: 20px;
+        height: 2px;
+        background: currentColor;
+        position: relative;
+      }
+
+      .mobile-toggle span::before,
+      .mobile-toggle span::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        width: 20px;
+        height: 2px;
+        background: currentColor;
+      }
+
+      .mobile-toggle span::before {
+        top: -6px;
+      }
+
+      .mobile-toggle span::after {
+        top: 6px;
+      }
+
+      .hero {
+        position: relative;
+        padding: 6.5rem 0 5rem;
+        overflow: hidden;
+      }
+
+      .hero::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(140deg, rgba(15, 11, 7, 0.85), rgba(217, 72, 59, 0.45));
+        z-index: 0;
+      }
+
+      .hero::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-image: url('../public/images/animalfarm-hero.svg');
+        background-size: cover;
+        background-position: center;
+        opacity: 0.35;
+        z-index: -1;
+      }
+
+      .hero-inner {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        gap: 2rem;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.35rem 1rem;
+        border-radius: 999px;
+        border: 1px solid rgba(245, 234, 215, 0.2);
+        background: rgba(15, 11, 7, 0.45);
+        text-transform: uppercase;
+        letter-spacing: 0.38rem;
+        font-size: 0.72rem;
+      }
+
+      h1 {
+        font-family: 'Playfair Display', serif;
+        font-size: clamp(2.8rem, 5vw, 4.5rem);
+        line-height: 1.1;
+        margin: 0;
+      }
+
+      .hero p {
+        max-width: 640px;
+        color: var(--color-muted);
+        font-size: 1.05rem;
+      }
+
+      section {
+        padding: 4.5rem 0;
+      }
+
+      section:nth-of-type(odd) {
+        background: rgba(15, 11, 7, 0.4);
+      }
+
+      section header h2 {
+        font-family: 'Playfair Display', serif;
+        font-size: clamp(2rem, 3vw, 2.7rem);
+        margin: 0.5rem 0;
+      }
+
+      section header p {
+        color: var(--color-muted);
+        max-width: 700px;
+      }
+
+      .split {
+        display: grid;
+        gap: 2.5rem;
+      }
+
+      .split.two {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      }
+
+      .split.three {
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      }
+
+      .card {
+        background: var(--color-surface-alt);
+        padding: 2rem;
+        border-radius: 24px;
+        border: 1px solid rgba(245, 234, 215, 0.08);
+        box-shadow: var(--shadow-soft);
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .card img {
+        border-radius: 18px;
+        margin-bottom: 1rem;
+        height: 180px;
+        object-fit: cover;
+        width: 100%;
+      }
+
+      .card h3 {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.35rem;
+        margin: 0;
+      }
+
+      .card span {
+        text-transform: uppercase;
+        letter-spacing: 0.22rem;
+        font-size: 0.75rem;
+        color: var(--color-accent);
+      }
+
+      .development-list {
+        display: grid;
+        gap: 1.2rem;
+      }
+
+      .development-item {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 1rem;
+        align-items: flex-start;
+      }
+
+      .development-item span {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: var(--color-accent);
+        margin-top: 0.4rem;
+      }
+
+      .video-embed {
+        position: relative;
+        padding-bottom: 56.25%;
+        border-radius: 24px;
+        overflow: hidden;
+        box-shadow: var(--shadow-soft);
+        border: 1px solid rgba(245, 234, 215, 0.08);
+      }
+
+      .video-embed iframe {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+      }
+
+      .gallery {
+        display: grid;
+        gap: 1.5rem;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      }
+
+      .gallery img {
+        border-radius: 24px;
+        border: 1px solid rgba(245, 234, 215, 0.08);
+        background: rgba(245, 234, 215, 0.05);
+        aspect-ratio: 4 / 3;
+        object-fit: cover;
+      }
+
+      .quote {
+        background: linear-gradient(135deg, rgba(217, 72, 59, 0.15), rgba(15, 11, 7, 0.8));
+        border-radius: 24px;
+        padding: 2rem;
+        border: 1px solid rgba(245, 234, 215, 0.15);
+        box-shadow: var(--shadow-soft);
+        font-size: 1.1rem;
+      }
+
+      .quote footer {
+        margin-top: 1.5rem;
+        text-transform: uppercase;
+        letter-spacing: 0.28rem;
+        font-size: 0.7rem;
+        color: var(--color-muted);
+      }
+
+      .newsletter {
+        background: rgba(217, 72, 59, 0.12);
+        border: 1px solid rgba(217, 72, 59, 0.32);
+        border-radius: 26px;
+        padding: 2.5rem;
+        display: grid;
+        gap: 1.5rem;
+        box-shadow: var(--shadow-soft);
+      }
+
+      .newsletter form {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+      }
+
+      input,
+      textarea {
+        width: 100%;
+        padding: 0.85rem 1.1rem;
+        border-radius: 14px;
+        border: 1px solid rgba(245, 234, 215, 0.2);
+        background: rgba(15, 11, 7, 0.7);
+        color: var(--color-on-surface);
+        font-size: 0.95rem;
+      }
+
+      input::placeholder,
+      textarea::placeholder {
+        color: rgba(245, 234, 215, 0.55);
+      }
+
+      .news-grid {
+        display: grid;
+        gap: 1.5rem;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      }
+
+      .news-card {
+        background: var(--color-surface-alt);
+        padding: 2rem;
+        border-radius: 24px;
+        border: 1px solid rgba(245, 234, 215, 0.08);
+        display: grid;
+        gap: 1rem;
+      }
+
+      .news-card time {
+        font-size: 0.75rem;
+        letter-spacing: 0.35rem;
+        text-transform: uppercase;
+        color: rgba(217, 72, 59, 0.75);
+      }
+
+      footer {
+        background: rgba(15, 11, 7, 0.9);
+        border-top: 1px solid rgba(245, 234, 215, 0.08);
+        padding: 3rem 0 2rem;
+        font-size: 0.85rem;
+        color: var(--color-muted);
+      }
+
+      footer .columns {
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      }
+
+      footer ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: grid;
+        gap: 0.4rem;
+      }
+
+      footer a:hover,
+      footer a:focus-visible {
+        color: var(--color-on-surface);
+      }
+
+      .footer-bottom {
+        margin-top: 2.5rem;
+        text-transform: uppercase;
+        letter-spacing: 0.3rem;
+        text-align: center;
+        font-size: 0.7rem;
+      }
+
+      @media (max-width: 780px) {
+        nav {
+          position: fixed;
+          inset: 0 0 auto auto;
+          margin: 1.25rem;
+          padding: 1.5rem;
+          background: rgba(15, 11, 7, 0.95);
+          border-radius: 24px;
+          border: 1px solid rgba(245, 234, 215, 0.15);
+          box-shadow: var(--shadow-soft);
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 1rem;
+          transform: translateX(120%);
+          transition: transform 0.3s ease;
+        }
+
+        nav.open {
+          transform: translateX(0);
+        }
+
+        .mobile-toggle {
+          display: inline-flex;
+        }
+
+        .hero {
+          padding-top: 5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container nav-bar">
+        <a class="brand" href="#top">Animal Farm</a>
+        <button class="mobile-toggle" type="button" aria-label="Toggle navigation">
+          <span></span>
+        </button>
+        <nav aria-label="Primary">
+          <a href="#about">About</a>
+          <a href="#creative-team">Creative Team</a>
+          <a href="#media">Media</a>
+          <a href="#press">Press</a>
+          <a href="#contact">Contact</a>
+          <a class="cta-btn" href="#newsletter">Join Mailing List</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="top">
+        <div class="container hero-inner">
+          <span class="eyebrow">Concept Musical in Development</span>
+          <h1>Animal Farm: The Musical</h1>
+          <p>
+            All Animals Are Equal, But Some Animals Are More Equal Than Others. This galvanizing new musical sets
+            Orwell’s classic in motion with an electrifying score, satire sharpened for today, and a chorus of
+            animals refusing to be silenced.
+          </p>
+          <div style="display: flex; flex-wrap: wrap; gap: 1rem;">
+            <a class="cta-btn" href="#newsletter">Join the Collective</a>
+            <a class="cta-btn" style="background: transparent; border: 1px solid rgba(245, 234, 215, 0.2); color: var(--color-muted);" href="#media">
+              Experience the Teaser
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="about">
+        <div class="container">
+          <header>
+            <span class="eyebrow">The story</span>
+            <h2>Revolution on Manor Farm</h2>
+            <p>
+              Animal Farm: The Musical finds a potent musical language for rebellion. Folk, gospel, hip-hop, and
+              orchestral textures collide as the animals topple their human oppressors—only to confront how ideals
+              can buckle under the weight of power.
+            </p>
+          </header>
+          <div class="split two" style="margin-top: 2.5rem;">
+            <div>
+              <p>
+                A nimble ensemble embodies the animals and their human counterparts while projections and tactile
+                scenic design transform the barn into a revolution-ready engine. The show is equal parts satire and
+                gut-punch, keeping the emotional stakes grounded in community and collective action.
+              </p>
+              <p>
+                Workshops explore propaganda in the digital age, refracting Orwell’s warning through modern media
+                cycles. The creative team aims for bold theatricality that feels urgent, dangerous, and alive.
+              </p>
+              <div style="margin-top: 1.75rem; display: flex; flex-wrap: wrap; gap: 0.8rem;">
+                <a class="cta-btn" style="background: transparent; border: 1px solid rgba(245, 234, 215, 0.15); color: var(--color-muted);" href="#creative-team">
+                  Meet the team
+                </a>
+                <a class="cta-btn" style="background: transparent; border: 1px solid rgba(245, 234, 215, 0.15); color: var(--color-muted);" href="#press">
+                  Read the buzz
+                </a>
+              </div>
+            </div>
+            <div class="card">
+              <h3>Development Snapshot</h3>
+              <div class="development-list">
+                <div class="development-item">
+                  <span></span>
+                  <div>
+                    <strong>Equity workshop</strong>
+                    <p style="margin: 0; color: var(--color-muted);">Summer 2025 · Chicago showcase</p>
+                  </div>
+                </div>
+                <div class="development-item">
+                  <span></span>
+                  <div>
+                    <strong>Concept album</strong>
+                    <p style="margin: 0; color: var(--color-muted);">Recording highlights with original cast</p>
+                  </div>
+                </div>
+                <div class="development-item">
+                  <span></span>
+                  <div>
+                    <strong>Industry presentation</strong>
+                    <p style="margin: 0; color: var(--color-muted);">Targeting NYC · Fall 2025</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="creative-team">
+        <div class="container">
+          <header>
+            <span class="eyebrow">Creative team</span>
+            <h2>Architects of the rebellion</h2>
+            <p>
+              Composer Steve Wallace, lyricist Daniel Abrahamson, and librettist Sarah Mucek merge genre-spanning
+              songwriting with politically charged storytelling.
+            </p>
+          </header>
+          <div class="split three" style="margin-top: 2.5rem;">
+            <div class="card">
+              <img src="../public/images/steve-wallace.svg" alt="Steve Wallace" />
+              <span>Composer</span>
+              <h3>Steve Wallace</h3>
+              <p>
+                Award-winning Chicago composer who bridges opera, film, and television. Credits include the WFMT
+                premiere of <em>Undying Love</em>, Best Score honors at Diversity at Cannes and WorldFest Houston, the
+                2022 theme for <em>YO! MTV Raps</em>, and the Amazon Prime musical <em>Hal King</em>.
+              </p>
+            </div>
+            <div class="card">
+              <img src="../public/images/daniel-abrahamson.svg" alt="Daniel Abrahamson" />
+              <span>Lyricist</span>
+              <h3>Daniel Abrahamson</h3>
+              <p>
+                Toronto-based composer-lyricist and 2019 Tom Hendry Award winner for <em>Stars of Mars</em>. His shows
+                <em>Super School!</em> and <em>Boy Falls From the Sky</em> have earned critical acclaim, including six Dora Award
+                nominations alongside collaborator Jake Epstein.
+              </p>
+            </div>
+            <div class="card">
+              <img src="../public/images/sarah-mucek.svg" alt="Sarah Mucek" />
+              <span>Librettist</span>
+              <h3>Sarah Mucek</h3>
+              <p>
+                Librettist behind <em>Super School!</em>, <em>X-MAS: A Merry Mutant Musical!</em>, and <em>Z-Town: The Zombie Musical</em>.
+                Her work has appeared across NYC, Idaho, and Canada, and she received the BMI Foundation’s Jerry
+                Harrington Award for Outstanding Creative Achievement.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="media">
+        <div class="container">
+          <header>
+            <span class="eyebrow">Media</span>
+            <h2>Witness the uprising</h2>
+            <p>
+              Workshop footage, concept demos, and visual language glimpses from the evolving world of Animal Farm.
+            </p>
+          </header>
+          <div class="split two" style="margin-top: 2.5rem; align-items: start;">
+            <div class="video-embed" aria-label="Animal Farm teaser video">
+              <iframe
+                src="https://www.youtube.com/embed/RWEP8ayrcgY"
+                title="Animal Farm teaser"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div class="card">
+              <h3>Sound of the farm</h3>
+              <p>
+                From barn-stomp rhythms to electrifying protest chants, follow the score’s evolution through studio
+                demos and rehearsal hall captures.
+              </p>
+              <a class="cta-btn" style="width: fit-content; background: transparent; border: 1px solid rgba(245, 234, 215, 0.2); color: var(--color-muted);" href="https://open.spotify.com/playlist/sample" target="_blank" rel="noreferrer">
+                Stream concept tracks
+              </a>
+            </div>
+          </div>
+          <div class="gallery" style="margin-top: 2.5rem;">
+            <img src="../public/images/animalfarm-gallery-01.svg" alt="Barn uprising concept art" />
+            <img src="../public/images/animalfarm-gallery-02.svg" alt="Commandment wall scenic study" />
+            <img src="../public/images/animalfarm-gallery-03.svg" alt="Finale lighting palette" />
+          </div>
+        </div>
+      </section>
+
+      <section id="press">
+        <div class="container">
+          <header>
+            <span class="eyebrow">Press</span>
+            <h2>Amplifying the revolution</h2>
+            <p>Industry buzz spotlights the urgency and musical muscle of this new adaptation of Orwell’s classic.</p>
+          </header>
+          <div class="split two" style="margin-top: 2.5rem;">
+            <blockquote class="quote">
+              &ldquo;A fearless new musical that turns barnyard rebellion into a thrilling theatrical uprising.&rdquo;
+              <footer>Front Row Arts</footer>
+            </blockquote>
+            <blockquote class="quote">
+              &ldquo;Wallace, Abrahamson, and Mucek craft a score that crackles with urgency and dark wit.&rdquo;
+              <footer>Workshop Journal</footer>
+            </blockquote>
+          </div>
+          <div class="news-grid" style="margin-top: 3rem;">
+            <article class="news-card">
+              <time datetime="2025-05-12">May 12, 2025</time>
+              <h3>Creative residency confirmed</h3>
+              <p>
+                Animal Farm secures a three-week development lab with Chicago Music Theatre to shape physical
+                vocabulary and scenic transitions.
+              </p>
+              <a href="#">Read more</a>
+            </article>
+            <article class="news-card">
+              <time datetime="2025-04-01">Apr 1, 2025</time>
+              <h3>Concept album enters production</h3>
+              <p>
+                The original creative trio heads into the studio with a 10-piece ensemble to capture the score’s
+                revolutionary sound.
+              </p>
+              <a href="#">Read more</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="newsletter">
+        <div class="container">
+          <div class="newsletter">
+            <header>
+              <span class="eyebrow">Newsletter</span>
+              <h2 style="margin: 0.5rem 0; font-family: 'Playfair Display', serif;">Join the collective</h2>
+              <p style="color: var(--color-muted);">
+                Sign up for development updates, casting calls, and exclusive preview invitations.
+              </p>
+            </header>
+            <form action="#" method="post">
+              <label class="sr-only" for="newsletter-email">Email</label>
+              <input id="newsletter-email" type="email" name="email" placeholder="you@example.com" required />
+              <button class="cta-btn" type="submit">Join mailing list</button>
+            </form>
+            <p style="margin: 0; color: rgba(245, 234, 215, 0.55); font-size: 0.85rem;">
+              We’ll reach out only when big milestones drop. No spam—promise.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <div class="container">
+          <header>
+            <span class="eyebrow">Contact</span>
+            <h2>We’d love to connect</h2>
+            <p>
+              Reach the creative team for press, producing partnerships, educational collaborations, or general
+              inquiries.
+            </p>
+          </header>
+          <div class="split two" style="margin-top: 2.5rem;">
+            <div class="card" style="gap: 1.25rem;">
+              <h3>Write to us</h3>
+              <p>
+                Email <a href="mailto:animalfarmthemusical@gmail.com">animalfarmthemusical@gmail.com</a> for all
+                inquiries. We respond within two business days.
+              </p>
+              <div>
+                <h4 style="margin: 0 0 0.5rem; font-family: 'Playfair Display', serif;">Social</h4>
+                <ul style="list-style: none; padding: 0; margin: 0; display: grid; gap: 0.4rem;">
+                  <li>
+                    <a href="https://www.instagram.com/animalfarmthemusical/" target="_blank" rel="noreferrer"
+                      >Instagram</a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://www.facebook.com/animalfarmthemusical" target="_blank" rel="noreferrer"
+                      >Facebook</a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://www.youtube.com/channel/UCJNSdoSCb0PYWVzJpYCfbeQ" target="_blank" rel="noreferrer"
+                      >YouTube</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="card">
+              <h3>Contact form</h3>
+              <form action="mailto:animalfarmthemusical@gmail.com" method="post">
+                <label class="sr-only" for="name">Name</label>
+                <input id="name" type="text" name="name" placeholder="Name" required />
+                <label class="sr-only" for="email">Email</label>
+                <input id="email" type="email" name="email" placeholder="Email" required />
+                <label class="sr-only" for="message">Message</label>
+                <textarea id="message" name="message" rows="4" placeholder="How can we collaborate?" required></textarea>
+                <button class="cta-btn" type="submit">Send message</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="columns">
+          <div>
+            <p style="text-transform: uppercase; letter-spacing: 0.28rem; font-size: 0.72rem; color: var(--color-accent);">
+              Animal Farm: The Musical
+            </p>
+            <p>
+              Concept musical in development from Steve Wallace, Daniel Abrahamson, and Sarah Mucek. All materials
+              ©
+              <span id="year"></span> Animal Farm Creative.
+            </p>
+          </div>
+          <div>
+            <h4 style="margin-bottom: 0.5rem; font-family: 'Playfair Display', serif;">Contact</h4>
+            <ul>
+              <li>
+                <a href="mailto:animalfarmthemusical@gmail.com">animalfarmthemusical@gmail.com</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 style="margin-bottom: 0.5rem; font-family: 'Playfair Display', serif;">Explore</h4>
+            <ul>
+              <li><a href="#about">About</a></li>
+              <li><a href="#creative-team">Creative Team</a></li>
+              <li><a href="#media">Media</a></li>
+              <li><a href="#press">Press</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+        <p class="footer-bottom">All materials subject to change in development.</p>
+      </div>
+    </footer>
+
+    <script>
+      const toggle = document.querySelector('.mobile-toggle');
+      const nav = document.querySelector('nav');
+      toggle.addEventListener('click', () => {
+        nav.classList.toggle('open');
+      });
+      nav.querySelectorAll('a').forEach((link) =>
+        link.addEventListener('click', () => {
+          nav.classList.remove('open');
+        })
+      );
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

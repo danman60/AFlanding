@@ -1,0 +1,20 @@
+{
+  "palette": {
+    "primary": "#",
+    "secondary": "#",
+    "accent": "#",
+    "surface": "#",
+    "onSurface": "#"
+  },
+  "typography": {
+    "display": "",
+    "text": ""
+  },
+  "hero": {
+    "mediaType": "image",
+    "src": "",
+    "poster": "",
+    "overlay": "linear-gradient(...)"
+  }
+}
+

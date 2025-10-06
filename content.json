@@ -1,0 +1,58 @@
+{
+    "title":  "Animal Farm: The Musical",
+    "tagline":  "All Animals Are Equal, But Some Animals Are More Equal Than Others.",
+    "synopsis":  "Animal Farm: The Musical reimagines Orwell\u0027s classic allegory through an electrifying score and galvanizing staging. After the animals of Manor Farm topple their human oppressors, euphoria splinters into a power struggle that mirrors the rise and fall of revolutions. Genre-blending songs and sharp humor expose the cost of corrupted ideals while celebrating the collective voice that refuses to be silenced.",
+    "creativeTeam":  [
+                         {
+                             "name":  "Steve Wallace",
+                             "role":  "Composer",
+                             "bio":  "Steve Wallace is an award-winning Chicago composer whose work spans opera, film, and television. Credits include the WFMT-premiered opera \u0027Undying Love,\u0027 Best Score honors at Diversity at Cannes and WorldFest Houston, and the 2022 theme for \u0027YO! MTV Raps.\u0027 His film musical \u0027Hal King\u0027 streams on Amazon Prime and was an AMAAs Best Diaspora Narrative nominee.",
+                             "photo":  "/images/steve-wallace.svg"
+                         },
+                         {
+                             "name":  "Daniel Abrahamson",
+                             "role":  "Lyricist",
+                             "bio":  "Toronto-based composer-lyricist Daniel Abrahamson received the 2019 Tom Hendry Award for Best Musical in Development for \u0027Stars of Mars.\u0027 His shows \u0027Super School!\u0027 and \u0027Boy Falls From the Sky\u0027 have earned critical acclaim, including six Dora Award nominations alongside collaborator Jake Epstein.",
+                             "photo":  "/images/daniel-abrahamson.svg"
+                         },
+                         {
+                             "name":  "Sarah Mucek",
+                             "role":  "Librettist",
+                             "bio":  "Sarah Mucek\u0027s libretti include \u0027Super School!,\u0027 \u0027X-MAS: A Merry Mutant Musical!,\u0027 and \u0027Z-Town: The Zombie Musical.\u0027 Her work has appeared Off-Broadway and across North America, earning the BMI Foundation\u0027s Jerry Harrington Award for Outstanding Creative Achievement.",
+                             "photo":  "/images/sarah-mucek.svg"
+                         }
+                     ],
+    "media":  {
+                  "teaserUrl":  "https://www.youtube.com/embed/RWEP8ayrcgY",
+                  "gallery":  [
+                                  "/images/animalfarm-gallery-01.svg",
+                                  "/images/animalfarm-gallery-02.svg",
+                                  "/images/animalfarm-gallery-03.svg"
+                              ],
+                  "playlistUrl":  "https://open.spotify.com/playlist/sample"
+              },
+    "pressQuotes":  [
+                        {
+                            "quote":  "A fearless new musical that turns barnyard rebellion into a thrilling theatrical uprising.",
+                            "source":  "Front Row Arts"
+                        },
+                        {
+                            "quote":  "Wallace, Abrahamson, and Mucek craft a score that crackles with urgency and dark wit.",
+                            "source":  "Workshop Journal"
+                        }
+                    ],
+    "contact":  {
+                    "email":  "animalfarmthemusical@gmail.com",
+                    "press":  "animalfarmthemusical@gmail.com",
+                    "general":  "animalfarmthemusical@gmail.com"
+                },
+    "social":  {
+                   "x":  "",
+                   "instagram":  "https://www.instagram.com/animalfarmthemusical/",
+                   "facebook":  "https://www.facebook.com/animalfarmthemusical",
+                   "youtube":  "https://www.youtube.com/channel/UCJNSdoSCb0PYWVzJpYCfbeQ",
+                   "tiktok":  ""
+               },
+    "newsletterProvider":  "static",
+    "newsletterAction":  "/api/newsletter"
+}

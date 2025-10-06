@@ -1,0 +1,41 @@
+{
+  "title": "",
+  "tagline": "",
+  "synopsis": "",
+  "creativeTeam": [
+    {
+      "name": "",
+      "role": "",
+      "bio": "",
+      "photo": ""
+    }
+  ],
+  "media": {
+    "teaserUrl": "",
+    "gallery": [
+      ""
+    ],
+    "playlistUrl": ""
+  },
+  "pressQuotes": [
+    {
+      "quote": "",
+      "source": ""
+    }
+  ],
+  "contact": {
+    "email": "",
+    "press": "",
+    "general": ""
+  },
+  "social": {
+    "x": "",
+    "instagram": "",
+    "facebook": "",
+    "youtube": "",
+    "tiktok": ""
+  },
+  "newsletterProvider": "static",
+  "newsletterAction": "/api/newsletter"
+}
+

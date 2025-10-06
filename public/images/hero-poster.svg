@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="overlay" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b1120" />
+      <stop offset="100%" stop-color="#155e75" />
+    </linearGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#overlay)" />
+  <circle cx="1560" cy="240" r="280" fill="#f59e0b" opacity="0.35" />
+  <circle cx="320" cy="860" r="360" fill="#22d3ee" opacity="0.25" />
+  <text x="50%" y="52%" dominant-baseline="middle" text-anchor="middle" font-family="'Playfair Display', serif" font-size="120" fill="#f8fafc" opacity="0.92">
+    Echoes in Amber
+  </text>
+  <text x="50%" y="60%" text-anchor="middle" font-family="'Inter', sans-serif" font-size="36" fill="#f8fafc" opacity="0.7">
+    Concept musical in development
+  </text>
+</svg>
+
