@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Animal Farm: The Musical ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â Concept Mockup</title>
+    <title>Animal Farm: The Musical — Concept Mockup</title>
     <meta
       name="description"
       content="Animal Farm: The Musical reimagines Orwell's classic through an electrifying score and galvanizing staging."
@@ -119,6 +119,24 @@
         box-shadow: 0 12px 30px rgba(217, 72, 59, 0.45);
       }
 
+      .cta-btn:focus-visible {
+        outline: 2px solid rgba(245, 234, 215, 0.9);
+        outline-offset: 3px;
+      }
+
+      a:focus-visible {
+        outline: 2px solid rgba(245, 234, 215, 0.65);
+        outline-offset: 3px;
+      }
+
+      input:focus,
+      textarea:focus,
+      .mobile-toggle:focus-visible {
+        outline: 2px solid var(--color-accent);
+        outline-offset: 2px;
+        border-color: var(--color-accent);
+      }
+
       .mobile-toggle {
         display: none;
         background: none;
@@ -164,7 +182,7 @@
         content: '';
         position: absolute;
         inset: 0;
-        background: linear-gradient(140deg, rgba(15, 11, 7, 0.85), rgba(217, 72, 59, 0.45));
+        background: linear-gradient(120deg, rgba(11, 7, 4, 0.92) 0%, rgba(22, 31, 24, 0.82) 55%, rgba(217, 72, 59, 0.58) 100%);
         z-index: 0;
       }
 
@@ -175,7 +193,8 @@
         background-image: url('images/af-hero-landscape.jpg');
         background-size: cover;
         background-position: center;
-        opacity: 0.35;
+        opacity: 0.28;
+        filter: saturate(0.75) contrast(0.9);
         z-index: -1;
       }
 
@@ -220,6 +239,11 @@
         background: rgba(15, 11, 7, 0.4);
       }
 
+      section header {
+        display: grid;
+        gap: 0.75rem;
+      }
+
       section header h2 {
         font-family: 'Playfair Display', serif;
         font-size: clamp(2rem, 3vw, 2.7rem);
@@ -258,9 +282,10 @@
       .card img {
         border-radius: 18px;
         margin-bottom: 1rem;
-        height: 180px;
-        object-fit: cover;
         width: 100%;
+        aspect-ratio: 3 / 4;
+        object-fit: cover;
+        object-position: center;
       }
 
       .card h3 {
@@ -376,6 +401,43 @@
         color: rgba(245, 234, 215, 0.55);
       }
 
+      .form-field {
+        width: 100%;
+        display: grid;
+        gap: 0.5rem;
+      }
+
+      .form-field + .form-field {
+        margin-top: 1rem;
+      }
+
+      .form-label {
+        display: block;
+        font-size: 0.8rem;
+        letter-spacing: 0.16rem;
+        text-transform: uppercase;
+        color: rgba(245, 234, 215, 0.65);
+        margin-bottom: 0.35rem;
+      }
+
+      .form-note {
+        margin: 0;
+        color: rgba(245, 234, 215, 0.55);
+        font-size: 0.85rem;
+      }
+
+      .form-feedback {
+        display: none;
+        margin: 0;
+        margin-top: 0.5rem;
+        color: rgba(245, 234, 215, 0.65);
+        font-size: 0.85rem;
+      }
+
+      .form-feedback.is-visible {
+        display: block;
+      }
+
       .news-grid {
         display: grid;
         gap: 1.5rem;
@@ -431,6 +493,51 @@
         letter-spacing: 0.3rem;
         text-align: center;
         font-size: 0.7rem;
+      }
+
+      @media (max-width: 960px) {
+        .hero {
+          padding: 5.5rem 0 4rem;
+        }
+
+        section header h2 {
+          font-size: clamp(1.8rem, 5vw, 2.3rem);
+        }
+
+        .hero p {
+          font-size: 1rem;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .container {
+          width: min(94vw, 640px);
+        }
+
+        h1 {
+          font-size: clamp(2.1rem, 9vw, 3.1rem);
+        }
+
+        .eyebrow {
+          letter-spacing: 0.24rem;
+          font-size: 0.62rem;
+        }
+
+        .hero {
+          padding: 4.5rem 0 3.5rem;
+        }
+
+        section {
+          padding: 3.75rem 0;
+        }
+
+        .newsletter {
+          padding: 1.75rem;
+        }
+
+        .split {
+          gap: 1.75rem;
+        }
       }
 
       @media (max-width: 780px) {
@@ -489,7 +596,7 @@
           <h1>Animal Farm: The Musical</h1>
           <p>
             All Animals Are Equal, But Some Animals Are More Equal Than Others. This galvanizing new musical sets
-            OrwellÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢s classic in motion with an electrifying score, satire sharpened for today, and a chorus of
+            Orwell's classic in motion with an electrifying score, satire sharpened for today, and a chorus of
             animals refusing to be silenced.
           </p>
           <div style="display: flex; flex-wrap: wrap; gap: 1rem;">
@@ -508,7 +615,7 @@
             <h2>Revolution on Manor Farm</h2>
             <p>
               Animal Farm: The Musical finds a potent musical language for rebellion. Folk, gospel, hip-hop, and
-              orchestral textures collide as the animals topple their human oppressorsÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã‚Âonly to confront how ideals
+              orchestral textures collide as the animals topple their human oppressors—only to confront how ideals
               can buckle under the weight of power.
             </p>
           </header>
@@ -520,7 +627,7 @@
                 gut-punch, keeping the emotional stakes grounded in community and collective action.
               </p>
               <p>
-                Workshops explore propaganda in the digital age, refracting OrwellÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢s warning through modern media
+                Workshops explore propaganda in the digital age, refracting Orwell's warning through modern media
                 cycles. The creative team aims for bold theatricality that feels urgent, dangerous, and alive.
               </p>
               <div style="margin-top: 1.75rem; display: flex; flex-wrap: wrap; gap: 0.8rem;">
@@ -539,7 +646,7 @@
                   <span></span>
                   <div>
                     <strong>Equity workshop</strong>
-                    <p style="margin: 0; color: var(--color-muted);">Summer 2025 ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â· Chicago showcase</p>
+                    <p style="margin: 0; color: var(--color-muted);">Summer 2025 — Chicago showcase</p>
                   </div>
                 </div>
                 <div class="development-item">
@@ -553,7 +660,7 @@
                   <span></span>
                   <div>
                     <strong>Industry presentation</strong>
-                    <p style="margin: 0; color: var(--color-muted);">Targeting NYC ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â· Fall 2025</p>
+                    <p style="margin: 0; color: var(--color-muted);">Targeting NYC — Fall 2025</p>
                   </div>
                 </div>
               </div>
@@ -574,7 +681,7 @@
           </header>
           <div class="split three" style="margin-top: 2.5rem;">
             <div class="card">
-              <img src="images/steve-wallace-headshot.jpg" alt="Steve Wallace" />
+              <img src="images/steve-wallace-headshot.jpg" alt="Composer Steve Wallace headshot" loading="lazy" />
               <span>Composer</span>
               <h3>Steve Wallace</h3>
               <p>
@@ -584,7 +691,7 @@
               </p>
             </div>
             <div class="card">
-              <img src="images/daniel-abrahamson-headshot.jpg" alt="Daniel Abrahamson" />
+              <img src="images/daniel-abrahamson-headshot.jpg" alt="Lyricist Daniel Abrahamson headshot" loading="lazy" />
               <span>Lyricist</span>
               <h3>Daniel Abrahamson</h3>
               <p>
@@ -594,12 +701,12 @@
               </p>
             </div>
             <div class="card">
-              <img src="images/sarah-mucek-headshot.jpeg" alt="Sarah Mucek" />
+              <img src="images/sarah-mucek-headshot.jpeg" alt="Librettist Sarah Mucek headshot" loading="lazy" />
               <span>Librettist</span>
               <h3>Sarah Mucek</h3>
               <p>
                 Librettist behind <em>Super School!</em>, <em>X-MAS: A Merry Mutant Musical!</em>, and <em>Z-Town: The Zombie Musical</em>.
-                Her work has appeared across NYC, Idaho, and Canada, and she received the BMI FoundationÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢s Jerry
+                Her work has appeared across NYC, Idaho, and Canada, and she received the BMI Foundation's Jerry
                 Harrington Award for Outstanding Creative Achievement.
               </p>
             </div>
@@ -618,7 +725,7 @@
           </header>
           <div class="split two" style="margin-top: 2.5rem; align-items: start;">
             <div class="video-embed" aria-label="Animal Farm teaser video">
-              <iframe
+              <iframe loading="lazy"
                 src="https://www.youtube.com/embed/RWEP8ayrcgY"
                 title="Animal Farm teaser"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -628,7 +735,7 @@
             <div class="card">
               <h3>Sound of the farm</h3>
               <p>
-                From barn-stomp rhythms to electrifying protest chants, follow the scoreÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢s evolution through studio
+                From barn-stomp rhythms to electrifying protest chants, follow the score's evolution through studio
                 demos and rehearsal hall captures.
               </p>
               <a class="cta-btn" style="width: fit-content; background: transparent; border: 1px solid rgba(245, 234, 215, 0.2); color: var(--color-muted);" href="https://open.spotify.com/playlist/sample" target="_blank" rel="noreferrer">
@@ -637,9 +744,9 @@
             </div>
           </div>
           <div class="gallery" style="margin-top: 2.5rem;">
-            <img src="images/af-logo-banner.jpg" alt="Barn uprising concept art" />
-            <img src="images/af-hero-landscape-alt.jpg" alt="Commandment wall scenic study" />
-            <img src="images/af-hero-landscape.jpg" alt="Finale lighting palette" />
+            <img src="images/af-logo-banner.jpg" alt="Barn uprising concept art collage" loading="lazy" />
+            <img src="images/af-hero-landscape-alt.jpg" alt="Commandment wall scenic study" loading="lazy" />
+            <img src="images/af-hero-landscape.jpg" alt="Finale lighting palette" loading="lazy" />
           </div>
         </div>
       </section>
@@ -649,7 +756,7 @@
           <header>
             <span class="eyebrow">Press</span>
             <h2>Amplifying the revolution</h2>
-            <p>Industry buzz spotlights the urgency and musical muscle of this new adaptation of OrwellÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢s classic.</p>
+            <p>Industry buzz spotlights the urgency and musical muscle of this new adaptation of Orwell's classic.</p>
           </header>
           <div class="split two" style="margin-top: 2.5rem;">
             <blockquote class="quote">
@@ -675,7 +782,7 @@
               <time datetime="2025-04-01">Apr 1, 2025</time>
               <h3>Concept album enters production</h3>
               <p>
-                The original creative trio heads into the studio with a 10-piece ensemble to capture the scoreÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢s
+                The original creative trio heads into the studio with a 10-piece ensemble to capture the score's
                 revolutionary sound.
               </p>
               <a href="#">Read more</a>
@@ -689,19 +796,21 @@
           <div class="newsletter">
             <header>
               <span class="eyebrow">Newsletter</span>
-              <h2 style="margin: 0.5rem 0; font-family: 'Playfair Display', serif;">Join the collective</h2>
-              <p style="color: var(--color-muted);">
+              <h2>Join the collective</h2>
+              <p>
                 Sign up for development updates, casting calls, and exclusive preview invitations.
               </p>
             </header>
-            <form id="newsletter-form" action="#" method="post">
-              <label class="sr-only" for="newsletter-email">Email</label>
-              <input id="newsletter-email" type="email" name="email" placeholder="you@example.com" required />
+            <form id="newsletter-form" action="#" method="post" aria-describedby="newsletter-note newsletter-feedback">
+              <div class="form-field">
+                <label class="form-label" for="newsletter-email">Email address</label>
+                <input id="newsletter-email" type="email" name="email" placeholder="you@example.com" autocomplete="email" required />
+              </div>
               <button class="cta-btn" type="submit">Join mailing list</button>
-              <p id="newsletter-feedback" style="display:none;margin:0;color:rgba(245, 234, 215, 0.65);font-size:0.85rem;">Thanks for reaching outÃ¢â‚¬â€we just opened your email client with the details.</p>
+              <p id="newsletter-feedback" class="form-feedback" role="status" aria-live="polite">Thanks for reaching out—we just opened your email client with the details.</p>
             </form>
-            <p style="margin: 0; color: rgba(245, 234, 215, 0.55); font-size: 0.85rem;">
-              WeÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢ll reach out only when big milestones drop. No spamÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã‚Âpromise.
+            <p id="newsletter-note" class="form-note">
+              We'll reach out only when big milestones drop. No spam—promise.
             </p>
           </div>
         </div>
@@ -711,7 +820,7 @@
         <div class="container">
           <header>
             <span class="eyebrow">Contact</span>
-            <h2>WeÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢d love to connect</h2>
+            <h2>We'd love to connect</h2>
             <p>
               Reach the creative team for press, producing partnerships, educational collaborations, or general
               inquiries.
@@ -748,12 +857,18 @@
             <div class="card">
               <h3>Contact form</h3>
               <form action="mailto:animalfarmthemusical@gmail.com" method="post">
-                <label class="sr-only" for="name">Name</label>
-                <input id="name" type="text" name="name" placeholder="Name" required />
-                <label class="sr-only" for="email">Email</label>
-                <input id="email" type="email" name="email" placeholder="Email" required />
-                <label class="sr-only" for="message">Message</label>
-                <textarea id="message" name="message" rows="4" placeholder="How can we collaborate?" required></textarea>
+                <div class="form-field">
+                  <label class="form-label" for="contact-name">Name</label>
+                  <input id="contact-name" type="text" name="name" placeholder="Name" autocomplete="name" required />
+                </div>
+                <div class="form-field">
+                  <label class="form-label" for="contact-email">Email</label>
+                  <input id="contact-email" type="email" name="email" placeholder="Email" autocomplete="email" required />
+                </div>
+                <div class="form-field">
+                  <label class="form-label" for="contact-message">Message</label>
+                  <textarea id="contact-message" name="message" rows="4" placeholder="How can we collaborate?" required></textarea>
+                </div>
                 <button class="cta-btn" type="submit">Send message</button>
               </form>
             </div>
@@ -770,9 +885,7 @@
               Animal Farm: The Musical
             </p>
             <p>
-              Concept musical in development from Steve Wallace, Daniel Abrahamson, and Sarah Mucek. All materials
-              ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â©
-              <span id="year"></span> Animal Farm Creative.
+              Concept musical in development from Steve Wallace, Daniel Abrahamson, and Sarah Mucek. All materials &copy; <span id="year"></span> Animal Farm Creative.
             </p>
           </div>
           <div>
@@ -810,25 +923,36 @@
         })
       );
       document.getElementById('year').textContent = new Date().getFullYear();
-          const newsletterForm = document.getElementById(''newsletter-form'');
-      const feedback = document.getElementById(''newsletter-feedback'');
+      const newsletterForm = document.getElementById('newsletter-form');
+      const feedback = document.getElementById('newsletter-feedback');
       if (newsletterForm) {
-        newsletterForm.addEventListener(''submit'', (event) => {
+        newsletterForm.addEventListener('input', () => {
+          if (feedback) {
+            feedback.classList.remove('is-visible');
+          }
+        });
+
+        newsletterForm.addEventListener('submit', (event) => {
           event.preventDefault();
-          const emailInput = newsletterForm.querySelector(''input[name="email"]'');
+          const emailInput = newsletterForm.querySelector('input[name="email"]');
           const email = emailInput ? emailInput.value.trim() : '';
+          if (feedback) {
+            feedback.classList.remove('is-visible');
+          }
           if (!email) {
             if (emailInput) {
               emailInput.focus();
             }
             return;
           }
-          const subject = encodeURIComponent(''Newsletter Signup'');
+          const subject = encodeURIComponent('Newsletter Signup');
           const body = encodeURIComponent(`Please add ${email} to the Animal Farm: The Musical updates list.`);
           window.location.href = `mailto:animalfarmthemusical@gmail.com?subject=${subject}&body=${body}`;
           if (feedback) {
-            feedback.style.display = ''block'';
+            feedback.textContent = 'Thanks for reaching out—we just opened your email client with the details.';
+            feedback.classList.add('is-visible');
           }
+          newsletterForm.reset();
         });
       }
 
