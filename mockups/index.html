@@ -361,6 +361,62 @@
         object-position: center;
       }
 
+      .creative-ensemble {
+        display: grid;
+        gap: 2.5rem;
+      }
+
+      .creative-portrait {
+        margin: 0;
+        border-radius: 36px;
+        overflow: hidden;
+        position: relative;
+        border: 1px solid rgba(245, 234, 215, 0.08);
+        box-shadow: 0 30px 54px rgba(6, 4, 3, 0.45);
+      }
+
+      .creative-portrait::after {
+        content: '';
+        position: absolute;
+        inset: -5% -2%;
+        background: radial-gradient(110% 80% at 15% 20%, rgba(255, 145, 82, 0.22), transparent 70%);
+        opacity: 0.6;
+        filter: blur(80px);
+        mix-blend-mode: screen;
+        pointer-events: none;
+      }
+
+      .creative-portrait img {
+        width: 100%;
+        height: auto;
+        display: block;
+        object-fit: cover;
+      }
+
+      .creative-bios {
+        display: grid;
+        gap: 1.75rem;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .creative-bios article {
+        background: linear-gradient(165deg, rgba(30, 22, 18, 0.88), rgba(15, 11, 7, 0.74));
+        border-radius: 28px;
+        border: 1px solid rgba(245, 234, 215, 0.08);
+        padding: 1.85rem;
+        box-shadow: 0 24px 42px rgba(4, 2, 1, 0.35);
+        display: grid;
+        gap: 0.85rem;
+      }
+
+      .creative-role {
+        margin: 0;
+        text-transform: uppercase;
+        letter-spacing: 0.24rem;
+        font-size: 0.76rem;
+        color: rgba(245, 234, 215, 0.68);
+      }
+
       .card h3 {
         font-family: 'Playfair Display', serif;
         font-size: 1.35rem;
@@ -639,6 +695,11 @@
         .hero p {
           font-size: 1rem;
         }
+
+        .creative-bios {
+          grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+          gap: 1.5rem;
+        }
       }
 
       @media (max-width: 640px) {
@@ -669,6 +730,19 @@
 
         .split {
           gap: 1.75rem;
+        }
+
+        .creative-ensemble {
+          gap: 2rem;
+        }
+
+        .creative-portrait {
+          border-radius: 28px;
+        }
+
+        .creative-bios {
+          grid-template-columns: 1fr;
+          gap: 1.35rem;
         }
       }
 
@@ -811,36 +885,35 @@
               songwriting with politically charged storytelling.
             </p>
           </header>
-          <div class="split three" style="margin-top: 2.5rem;">
-            <div class="card">
-              <img src="images/steve-wallace-headshot.jpg" alt="Composer Steve Wallace headshot" loading="lazy" />
-              <span>Composer</span>
-              <h3>Steve Wallace</h3>
-              <p>
-                Award-winning Chicago composer who bridges opera, film, and television. Credits include the WFMT
-                premiere of <em>Undying Love</em>, Best Score honors at Diversity at Cannes and WorldFest Houston, the
-                2022 theme for <em>YO! MTV Raps</em>, and the Amazon Prime musical <em>Hal King</em>.
-              </p>
-            </div>
-            <div class="card">
-              <img src="images/daniel-abrahamson-headshot.jpg" alt="Lyricist Daniel Abrahamson headshot" loading="lazy" />
-              <span>Lyricist</span>
-              <h3>Daniel Abrahamson</h3>
-              <p>
-                Toronto-based composer-lyricist and 2019 Tom Hendry Award winner for <em>Stars of Mars</em>. His shows
-                <em>Super School!</em> and <em>Boy Falls From the Sky</em> have earned critical acclaim, including six Dora Award
-                nominations alongside collaborator Jake Epstein.
-              </p>
-            </div>
-            <div class="card">
-              <img src="images/sarah-mucek-headshot.jpeg" alt="Librettist Sarah Mucek headshot" loading="lazy" />
-              <span>Librettist</span>
-              <h3>Sarah Mucek</h3>
-              <p>
-                Librettist behind <em>Super School!</em>, <em>X-MAS: A Merry Mutant Musical!</em>, and <em>Z-Town: The Zombie Musical</em>.
-                Her work has appeared across NYC, Idaho, and Canada, and she received the BMI Foundation's Jerry
-                Harrington Award for Outstanding Creative Achievement.
-              </p>
+          <div class="creative-ensemble">
+            <figure class="creative-portrait">
+              <img src="images/creative-team-ensemble.png" alt="Sarah Mucek, Daniel Abrahamson, and Steve Wallace seated amid sculptural ruins" loading="lazy" width="1536" height="672" />
+            </figure>
+            <div class="creative-bios">
+              <article>
+                <p class="creative-role">Sarah Mucek - Librettist</p>
+                <p>
+                  Librettist behind <em>Super School!</em>, <em>X-MAS: A Merry Mutant Musical!</em>, and <em>Z-Town: The Zombie Musical</em>.
+                  Her work has appeared across NYC, Idaho, and Canada, and she received the BMI Foundation's Jerry
+                  Harrington Award for Outstanding Creative Achievement.
+                </p>
+              </article>
+              <article>
+                <p class="creative-role">Daniel Abrahamson - Lyricist</p>
+                <p>
+                  Toronto-based composer-lyricist and 2019 Tom Hendry Award winner for <em>Stars of Mars</em>. His shows
+                  <em>Super School!</em> and <em>Boy Falls From the Sky</em> have earned critical acclaim, including six Dora Award
+                  nominations alongside collaborator Jake Epstein.
+                </p>
+              </article>
+              <article>
+                <p class="creative-role">Steve Wallace - Composer</p>
+                <p>
+                  Award-winning Chicago composer who bridges opera, film, and television. Credits include the WFMT
+                  premiere of <em>Undying Love</em>, Best Score honors at Diversity at Cannes and WorldFest Houston, the
+                  2022 theme for <em>YO! MTV Raps</em>, and the Amazon Prime musical <em>Hal King</em>.
+                </p>
+              </article>
             </div>
           </div>
         </div>
